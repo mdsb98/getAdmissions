@@ -1,0 +1,252 @@
+<style>
+  :host {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
+  }
+</style>
+<div class="content" role="main" style="margin-top: 20px;">
+  <div class="row">
+    <div class="col s14">
+      <div class="landingcourse">
+        <div class="menufirst">
+          <ul>
+            <!-- Diploma -->
+            <li
+              class="catBox bg2"
+              (mouseenter)="toggleSubMenu(0, true)"
+              (mouseleave)="toggleSubMenu(0, false)"
+            >
+              <i
+                class="fa fa-hand-o-right faa-passing animated"
+                aria-hidden="true"
+              ></i>
+              <h2>Diploma</h2>
+              <div
+                class="toggle-data"
+                style="height: auto"
+                [ngClass]="{ visible: activeMenu === 0 }"
+              >
+                <ul>
+                  <li>
+                    <h2 style="border-top: none">Diploma</h2>
+                    <p
+                      class="adjustment non-clickable"
+                      style="border-color: rgb(200, 82, 32)"
+                    >
+                      To be announced
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Undergraduate -->
+            <li
+              class="catBox bg1"
+              (mouseenter)="toggleSubMenu(1, true)"
+              (mouseleave)="toggleSubMenu(1, false)"
+            >
+              <i
+                class="fa fa-hand-o-right faa-passing animated"
+                aria-hidden="true"
+              ></i>
+
+              <h2>Undergraduate <br />(BTech / BBA / BSc / BCA/ BA/ BCom)</h2>
+
+              <div
+                class="toggle-data"
+                style="height: auto"
+                [ngClass]="{ visible: activeMenu === 1 }"
+              >
+                <ul>
+                  <li>
+                    <h2 style="text-transform: none">BTech - 10+2</h2>
+                    <p
+                      class="adjustment"
+                      style="border-color: rgb(200, 82, 32)"
+                      (click)="setActiveContent('Postgraduate MBA')"
+                    >
+                      <i
+                        class="fa fa-angle-double-right"
+                        aria-hidden="true"
+                      ></i>
+                      10 + 2 Marks based (EXCEPT Biotech) - JIIT Noida
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Postgraduate -->
+            <li
+              class="catBox bg2"
+              (mouseenter)="toggleSubMenu(2, true)"
+              (mouseleave)="toggleSubMenu(2, false)"
+            >
+              <i
+                class="fa fa-hand-o-right faa-passing animated"
+                aria-hidden="true"
+              ></i>
+
+              <h2>Postgraduate <br />(MBA / MTech / MSc / MCA)</h2>
+
+              <div
+                class="toggle-data"
+                style="height: auto"
+                [ngClass]="{ visible: activeMenu === 2 }"
+              >
+                <ul>
+                  <li>
+                    <h2 style="border-top: none">MBA</h2>
+                    <p
+                      class="adjustment"
+                      style="border-color: rgb(200, 82, 32)"
+                      (click)="setActiveContent('Postgraduate MBA')"
+                    >
+                      <i
+                        class="fa fa-angle-double-right"
+                        aria-hidden="true"
+                      ></i>
+                      CAT/MAT/CMAT/XAT/GMAT/ATMA - Jaypee Business School
+                    </p>
+                    <p
+                      class="adjustment"
+                      (click)="setActiveContent('Postgraduate HHM & EM')"
+                    >
+                      <i
+                        class="fa fa-angle-double-right"
+                        aria-hidden="true"
+                      ></i>
+                      HHM &amp; EM - Jaypee Business School
+                    </p>
+                  </li>
+                  <li>
+                    <h2 style="text-transform: none">M.Tech</h2>
+                    <p
+                      class="adjustment"
+                      style="border-color: rgb(200, 82, 32)"
+                      (click)="setActiveContent('Postgraduate M.Tech GATE')"
+                    >
+                      <i
+                        class="fa fa-angle-double-right"
+                        aria-hidden="true"
+                      ></i>
+                      GATE - JIIT, Noida
+                    </p>
+                    <p
+                      class="adjustment"
+                      (click)="setActiveContent('Postgraduate M.Tech PGET')"
+                    >
+                      <i
+                        class="fa fa-angle-double-right"
+                        aria-hidden="true"
+                      ></i>
+                      PGET - JIIT, Noida
+                    </p>
+                  </li>
+                  <li>
+                    <h2 style="text-transform: none">MCA</h2>
+                    <p
+                      class="adjustment non-clickable"
+                      style="border-color: rgb(200, 82, 32)"
+                    >
+                      To be announced
+                    </p>
+                  </li>
+                  <li>
+                    <h2 style="text-transform: none">M.Sc.</h2>
+                    <p
+                      class="adjustment non-clickable"
+                      style="border-color: rgb(200, 82, 32)"
+                    >
+                      To be announced
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Doctorate -->
+            <li
+              class="catBox bg1"
+              (mouseenter)="toggleSubMenu(3, true)"
+              (mouseleave)="toggleSubMenu(3, false)"
+            >
+              <i
+                class="fa fa-hand-o-right faa-passing animated"
+                aria-hidden="true"
+              ></i>
+
+              <h2>Doctorate (PhD)</h2>
+
+              <div
+                class="toggle-data"
+                style="height: auto"
+                [ngClass]="{ visible: activeMenu === 3 }"
+              >
+                <ul>
+                  <li>
+                    <h2 style="border-top: none">Doctorate (PhD)</h2>
+                    <p
+                      class="adjustment"
+                      style="border-color: rgb(200, 82, 32)"
+                    >
+                      <i
+                        class="fa fa-angle-double-right"
+                        aria-hidden="true"
+                      ></i>
+                      <a id="26" href="javascript:void(0);">PhD - JIIT Noida</a>
+                    </p>
+                    <p class="adjustment">
+                      <i
+                        class="fa fa-angle-double-right"
+                        aria-hidden="true"
+                      ></i>
+                      <a id="27" href="javascript:void(0);"
+                        >PhD - JUIT Waknaghat</a
+                      >
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col s8">
+      <div class="right-side-data" *ngIf="activeContent === 'Postgraduate MBA'">
+        <h1>Postgraduate - MBA</h1>
+        <p>Details about CAT/MAT/CMAT/XAT/GMAT/ATMA...</p>
+
+        <button class="close-btn" (click)="closeContent()">Close</button>
+      </div>
+      <div
+        class="right-side-data"
+        *ngIf="activeContent === 'Postgraduate HHM & EM'"
+      >
+        <h1>Postgraduate - HHM & EM</h1>
+        <p>Details about HHM & EM...</p>
+      </div>
+      <div
+        class="right-side-data"
+        *ngIf="activeContent === 'Postgraduate M.Tech GATE'"
+      >
+        <h1>Postgraduate - M.Tech (GATE)</h1>
+        <p>Details about GATE...</p>
+      </div>
+      <div
+        class="right-side-data"
+        *ngIf="activeContent === 'Postgraduate M.Tech PGET'"
+      >
+        <h1>Postgraduate - M.Tech (PGET)</h1>
+        <p>Details about PGET...</p>
+      </div>
+    </div>
+  </div>
+</div>

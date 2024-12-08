@@ -1,0 +1,71 @@
+.menufirst ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.landingcourse {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+}
+li.catBox {
+  margin-bottom: 8px;
+  padding: 7px 10px;
+  height: 80px;
+  width: 100%;
+  position: relative;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  box-shadow: 5px 5px 5px #aaa;
+}
+li.catBox h2 {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: left;
+}
+.bg2 {
+  background: #1cc5dc;
+}
+.toggle-data {
+  background: rgb(255, 255, 255);
+  box-shadow: 2px 2px 12px 12px #8080802b;
+  z-index: 999;
+  overflow-y: auto;
+  padding: 5px 12px;
+  position: absolute;
+  top: 0px;
+  border-radius: 3px;
+  width: 100%;
+  display: none;
+  right: -100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.menufirst .toggle-data h2 {
+  color: black !important;
+  border-top: 1px solid #9a9faa7d;
+  /* padding-top: 11px; */
+}
+.course li:hover .toggle-data {
+  display: block;
+  transition: opacity 600ms, visibility 600ms;
+}
+.bg1 {
+  background: #21c87a;
+}
+.toggle-data.visible {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 1024px) {
+  .toggle-data {
+    right: 0;
+    top: 74px;
+  }
+}
